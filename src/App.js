@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Sound from 'react-sound';
+import MusicBox from './assets/GrandmasRemorse.mp3' 
+import Doggs from './components/Doggs';
 function App() {
   return (
     <div className="App">
+      <p>Welcome to Eye Candy<br/> Here, with soothing colours and serene music, you can look at cute dogs. Ease your brain. Eye Candy. </p>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Sound
+          url={MusicBox}
+          playStatus={Sound.status.PLAYING}
+          playFromPosition={300}
+          loop={true}
+        />
+      <Doggs />
       </header>
     </div>
   );
