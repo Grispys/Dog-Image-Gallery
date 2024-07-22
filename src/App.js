@@ -2,6 +2,7 @@ import './App.css';
 import Sound from 'react-sound';
 import MusicBox from './assets/GrandmasRemorse.mp3' 
 import Doggs from './components/Doggs';
+import ImageGallery from './components/ImageGallery';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
           loop={true}
         />
       <Doggs />
+      <ImageGallery/>
       </header>
     </div>
   );
