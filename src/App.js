@@ -1,12 +1,14 @@
 import './App.css';
 import Sound from 'react-sound';
-import MusicBox from './assets/GrandmasRemorse.mp3' 
-import Doggs from './components/Doggs';
-import ImageGallery from './components/ImageGallery';
+import MusicBox from './assets/ladyfingers.mp3' 
+import JankSolution from './components/JankSolution';
+import image from './assets/dogceo.png'
+import './assets/form-control.css'
+
 function App() {
   return (
     <div className="App">
-      <p>Welcome to Eye Candy<br/> Here, with soothing colours and serene music, you can look at cute dogs. Ease your brain. Eye Candy. </p>
+      <p>Welcome to Canines & Other Delights. <img src={image} alt='doggy' height={50} width={50} title='Thanks to dog.ceo and Stanford Dogs for the API dataset.'/></p> 
       <header className="App-header">
         <Sound
           url={MusicBox}
@@ -14,9 +16,9 @@ function App() {
           playFromPosition={300}
           loop={true}
         />
-      <Doggs />
-      <ImageGallery/>
+      <JankSolution/>
       </header>
+      
     </div>
   );
 }

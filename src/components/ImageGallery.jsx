@@ -1,14 +1,33 @@
-import Doggs from "./Doggs"
+import React, { useState, useEffect } from 'react';
 
-function ImageGallery() {
-    let imgLink = `https://dog.ceo/api/breed/${Doggs.dogs}/images/random`
-    return (
-    <div>
-        <img href={imgLink} alt="This should be a dog!"></img>
+const ImageGallery = ({ selectedID, numImg }) => {
+  const [imgLinks, setImgLinks] = useState([]);
+
+  useEffect(() => {
+    const fetchImg = async () => {
+      if (selectedID && numImg) {
+        const response = await fetch(`https://dog.ceo/api/breed/${selectedID}/images/random/${numImg}`);
+        const data = await response.json();
+        setImgLinks(data.message);
+      }
+    };
+
+    fetchImg();
+  }, [selectedID, numImg]);
+
+  return (
+    <div id="imgBox">
+      {imgLinks.length > 0 ? (
+        imgLinks.map((link, index) => (
+          <img key={index} src={link} alt="Dogs will be loaded here!!" height={200} width={200} />
+        ))
+      ) : (
+        <p class="Info">your dogs will appear here onec you've made your choice.
+          unfortunately, some dogs have a limited amout of photos.
+        </p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-ImageGallery()
-
-export default ImageGallery
+export default ImageGallery;
