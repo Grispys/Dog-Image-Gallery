@@ -46,7 +46,7 @@ code {
 }
 
 #imgBox img:hover{
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.342);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.514);
   transition: box-shadow .25s ease-in-out;
   transform: scale(1.30);
   transition: transform .25s ease-in-out;
@@ -55,7 +55,7 @@ code {
 
 
 #imgBox img:not(:hover){
-  box-shadow: 0px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.171);
   transition: box-shadow .5s ease-in-out;    
   transform: scale(1.00);
   transition: transform .5s ease-in-out;
