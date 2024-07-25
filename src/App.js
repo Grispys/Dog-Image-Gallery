@@ -18,7 +18,7 @@ function App() {
         />
       <JankSolution/>
       </header>
-      hello!
+      <p>Remember to allow this website to "autoplay audio" for the full experience.</p>
     </div>
   );
 }

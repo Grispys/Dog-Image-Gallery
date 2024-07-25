@@ -34,7 +34,7 @@ code {
 }
 
 #imgBox{
-  height: 1000px;
+  height: 1100px;
   width: 1350px;
   margin-top: 20px;
 }
@@ -62,7 +62,3 @@ code {
   z-index: 0;
 }
 
-
-#imgBox p{
-  background-color: #b0d8e3;
-}

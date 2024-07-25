@@ -15,9 +15,6 @@
 
 .App p {
   text-align: center;
-  background: linear-gradient(270deg, #ff9a9e, #b0d8e3, #fff7b4, #ffdbfa);
-  background-size: 200% 200%;
-  animation: wave 10s ease-in-out infinite;
   font-family: "Edu AU VIC WA NT Hand", cursive;
   font-weight: 500;
   border-radius: 10px;

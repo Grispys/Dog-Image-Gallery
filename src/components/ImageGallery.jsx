@@ -22,9 +22,11 @@ const ImageGallery = ({ selectedID, numImg }) => {
           <img key={index} src={link} alt="Dogs will be loaded here!!" height={200} width={200} />
         ))
       ) : (
-        <p class="Info">your dogs will appear here onec you've made your choice.
+
+        <p>your dogs will appear here onec you've made your choice.
           unfortunately, some dogs have a limited amout of photos.
         </p>
+
       )}
     </div>
   );
